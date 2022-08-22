@@ -1,0 +1,36 @@
+.model-Content{
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.modal-img-sec{
+    width: 500vw;
+}
+.modal-img{
+    width: 100%;
+}
+
+.modal-txt-sec{
+    width: 300vw;
+}
+
+.width-half{
+    width: 50%;
+}
+
+@media (max-width: 1000px){
+    .model-Content{
+        flex-direction: column !important;
+    }
+    .modal-img-sec{
+        width: 100%;
+    }
+    .modal-img{
+        width: 100%;
+    }
+    
+    .modal-txt-sec{
+        width: 100%;
+    }
+    
+}

@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card .content {
+  position: absolute;
+  bottom: -160px;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -10px 10px rgba(165, 165, 165, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: bottom 0.5s;
+  transition-delay: 0.65s;
+}
+.container .card:hover .content {
+  bottom: 0;
+  transition-delay: 0s;
+}
+.container .card .content .contentBx h3 {
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 15px;
+  line-height: 1.1em;
+  transition: 0.5s;
+  transition-delay: 0.6s;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.container .card:hover .content .contentBx h3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.container .card .content .contentBx h3 span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
+}
+.container .card .content .sci {
+  position: relative;
+  bottom: 10px;
+  display: flex;
+}
+.container .card .content .sci li {
+  list-style: none;
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+  transition-delay: calc(0.2s * var(--i));
+}
+
+.container .card:hover .content .sci li {
+  transform: translateY(0);
+  opacity: 1;
+}
+.container .card .content .sci li a {
+  color: whitesmoke;
+  font-size: 24px;
+}
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+#cubeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cubeWrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+#cubes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+}
+.intro{
+  margin-top:3px;
+}
+
+.head {
+  text-align: center;
+}
+.head h1 {
+  font-weight: 400;
+  position: relative;
+}
+.head h1:before, .head h1:after {
+  content: "";
+  height: 1px;
+  width: 30%;
+  background: #aaa;
+  display: block;
+  position: absolute;
+  top: 50%;
+}
+.head h1:before {
+  left: 0;
+}
+.head h1:after {
+  right: 0;
+}
+
+.moreTeam {
+  text-align: center;
+  margin-top: 25px;
+}
+.moreTeam a {
+  color: #444;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+.moreTeam a svg {
+  padding-left: 5px;
+}
+.moreTeam a:hover {
+  background: #ddd;
+}
+
+
+
+.cube {
+  height: 400px;
+  width: 300px;
+  background-size: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3), 0 2px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-bottom: 30px;
+}
+.cube .name {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  text-shadow: 0 1px 3px #000;
+  z-index: 3;
+}
+.cube .name h1 {
+  font-size: 16px;
+  color: #fff;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.cube .name p {
+  color: #fff;
+  margin: 0;
+  font-size: 14px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.cube .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.5s ease;
+  z-index: 2;
+}
+.cube .content ul {
+  padding: 20%;
+  margin: 0 0 55px 0;
+  cursor: default;
+  text-align: center;
+}
+.cube .content ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 11.05px 10px 11.05px;
+  top: 40px;
+  position: relative;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.cube .content ul li a {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.cube .content ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.cube:hover .content {
+  opacity: 1;
+}
+.cube:hover .content li {
+  top: 15px;
+  opacity: 1;
+  transition: 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.cube:hover .content li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.cube:hover .content li:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.cube:hover .content li:nth-child(4) {
+  transition-delay: 0.6s;
+}
+.cube:hover .content h1 {
+  top: 0;
+}
+.cube:hover .content p {
+  top: 10px;
+}
+.cube:hover .innerBorder {
+  width: 90%;
+  height: 90%;
+  opacity: 1;
+}
+.cube:hover .darken {
+  opacity: 1;
+}
+
+
+.darken {
+  background: rgba(38, 50, 56, 0.85);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.innerBorder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #fff;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.imgBx{
+  height:100%;  
+}
+
+.imgBx img {
+  width:100%;
+  height:100%;
+}
+/* Margin Query */
+@media (max-width: 920px) {
+.intro{
+flex-direction: column;
+}
+}
